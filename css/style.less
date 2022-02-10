@@ -1,0 +1,200 @@
+@import "mixins";
+@import "vars";
+
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: local('Helvetica Neue Light'), local('Helvetica-Neue-Light'),
+  url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: local('Helvetica Neue Bold'), local('Helvetica-Neue-Bold'),
+  url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Helvetica Neue Light", serif;
+}
+
+body {
+  .flex-display();
+  .align-items(center);
+}
+
+a, a:hover {
+  color: rgb(42, 204, 239);
+  text-decoration: none;
+}
+
+.visible {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.error, .reset-password {
+  font-size: 12px;
+}
+
+.error {
+  position: absolute;
+  top: 43px;
+  left: 3px;
+  letter-spacing: -0.2px;
+  color: red;
+  font-weight: 600;
+
+  &::after {
+    .after-input();
+    background: url("@{img}cross.jpg") no-repeat;
+    width: 12px;
+    height: 12px;
+    bottom: 36px;
+    left: 300px;
+  }
+}
+
+.valid {
+
+  &::after {
+    .after-input();
+    background: url("@{img}check-icon.png") no-repeat;
+    width: 10px;
+    height: 13px;
+    bottom: 15px;
+    left: 308px;
+  }
+}
+
+.login-form, .container {
+  max-width: 440px;
+}
+
+.container, .bank {
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0;
+}
+
+.box, .form-control {
+  border: 1px outset;
+  background-color: #FFFFFF;
+}
+
+.bank, .reset-password, .input-container .form-control {
+  color: @text-color;
+}
+
+.bank {
+  margin-bottom: 17px;
+}
+
+.bank-word {
+  font-family: 'Helvetica Neue Bold', serif;
+  font-size: 41px;
+  color: rgba(44, 167, 198, 255);
+}
+
+.support-portal-word {
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+
+.bank, .input-container, .form-control {
+  max-width: 295px;
+}
+
+.box {
+  border-color: rgba(153, 153, 153, 33%);
+  .border-radius(5.51px);
+}
+
+.input-container {
+  margin: @margin auto;
+
+  .form-control {
+    height: 40px;
+    padding-left: 40px;
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    .border-radius(5px);
+    border-color: rgba(153, 153, 153, 28%);
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: @text-color;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  .login-btn {
+    .border-radius (2.5px);
+    margin-bottom: 14px;
+    padding: 5px 24px;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: -0.18px;
+    background-color: rgba(54, 162, 193, 255);
+    .box-shadow(2px 3px 1px rgba(58, 123, 141, 255));
+
+    &:active {
+      .transform( scale(0.98));
+    }
+  }
+
+  .valid-input {
+    border-color: rgb(0, 138, 70);
+  }
+}
+
+.email-container, .password-container {
+  margin-bottom: @margin;
+}
+
+.email-container, .password-container {
+  position: relative;
+}
+
+.email-icon {
+  background: url("@{img}login_user_icon.png") center center/12px no-repeat;
+  .input-icon();
+}
+
+.password-icon {
+  background: url("@{img}lock-icon.png") center center/17px no-repeat;
+  .input-icon();
+}
+
+#password {
+  margin-bottom: 40px;
+}
+
+.reset-password {
+  letter-spacing: -0.12px;
+}
+

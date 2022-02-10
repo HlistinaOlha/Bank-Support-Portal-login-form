@@ -1,0 +1,44 @@
+//main: style.less
+
+.flex-display() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-items(@align) {
+  -webkit-align-items: @align;
+  align-items: @align;
+}
+
+.border-radius (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.box-shadow (@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow:    @shadow;
+  box-shadow:         @shadow;
+}
+
+.transform(@string) {
+  -webkit-transform: @string;
+  -moz-transform: @string;
+  -ms-transform: @string;
+  -o-transform: @string;
+}
+
+.after-input(){
+  content: "";
+  position:absolute;
+  cursor: text;
+}
+
+.input-icon() {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}

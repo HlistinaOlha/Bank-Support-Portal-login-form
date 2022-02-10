@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: local('Helvetica Neue Light'), local('Helvetica-Neue-Light'), url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: local('Helvetica Neue Bold'), local('Helvetica-Neue-Bold'), url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Helvetica Neue Light", serif;
+}
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+a,
+a:hover {
+  color: #2accef;
+  text-decoration: none;
+}
+.visible {
+  display: block;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.error,
+.reset-password {
+  font-size: 12px;
+}
+.error {
+  position: absolute;
+  top: 43px;
+  left: 3px;
+  letter-spacing: -0.2px;
+  color: red;
+  font-weight: 600;
+}
+.error::after {
+  content: "";
+  position: absolute;
+  cursor: text;
+  background: url("../images/cross.jpg") no-repeat;
+  width: 12px;
+  height: 12px;
+  bottom: 36px;
+  left: 300px;
+}
+.valid::after {
+  content: "";
+  position: absolute;
+  cursor: text;
+  background: url("../images/check-icon.png") no-repeat;
+  width: 10px;
+  height: 13px;
+  bottom: 15px;
+  left: 308px;
+}
+.login-form,
+.container {
+  max-width: 440px;
+}
+.container,
+.bank {
+  margin: 0 auto;
+}
+.container {
+  padding: 0;
+}
+.box,
+.form-control {
+  border: 1px outset;
+  background-color: #FFFFFF;
+}
+.bank,
+.reset-password,
+.input-container .form-control {
+  color: #666666;
+}
+.bank {
+  margin-bottom: 17px;
+}
+.bank-word {
+  font-family: 'Helvetica Neue Bold', serif;
+  font-size: 41px;
+  color: #2ca7c6;
+}
+.support-portal-word {
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+.bank,
+.input-container,
+.form-control {
+  max-width: 295px;
+}
+.box {
+  border-color: rgba(153, 153, 153, 0.33);
+  -webkit-border-radius: 5.51px;
+  -moz-border-radius: 5.51px;
+  border-radius: 5.51px;
+}
+.input-container {
+  margin: 34px auto;
+}
+.input-container .form-control {
+  height: 40px;
+  padding-left: 40px;
+  font-size: 14px;
+  letter-spacing: -0.14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-color: rgba(153, 153, 153, 0.28);
+}
+.input-container .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.input-container .form-control:-webkit-autofill {
+  -webkit-text-fill-color: #666666;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.input-container .form-control::-ms-clear {
+  display: none;
+}
+.input-container .login-btn {
+  -webkit-border-radius: 2.5px;
+  -moz-border-radius: 2.5px;
+  border-radius: 2.5px;
+  margin-bottom: 14px;
+  padding: 5px 24px;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.18px;
+  background-color: #36a2c1;
+  -webkit-box-shadow: 2px 3px 1px #3a7b8d;
+  -moz-box-shadow: 2px 3px 1px #3a7b8d;
+  box-shadow: 2px 3px 1px #3a7b8d;
+}
+.input-container .login-btn:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  -o-transform: scale(0.98);
+}
+.input-container .valid-input {
+  border-color: #008a46;
+}
+.email-container,
+.password-container {
+  margin-bottom: 34px;
+}
+.email-container,
+.password-container {
+  position: relative;
+}
+.email-icon {
+  background: url("../images/login_user_icon.png") center center / 12px no-repeat;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.password-icon {
+  background: url("../images/lock-icon.png") center center / 17px no-repeat;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+#password {
+  margin-bottom: 40px;
+}
+.reset-password {
+  letter-spacing: -0.12px;
+}
+/*# sourceMappingURL=style.css.map */
