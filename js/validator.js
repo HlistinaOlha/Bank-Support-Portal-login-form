@@ -35,12 +35,9 @@ export class Validator {
         });
 
         this.emailEl.addEventListener(this.blur, () => {
-            this.removeInputHighlighting(this.emailEl);
-        });
-
-        this.emailEl.addEventListener(this.input, () => {
             this.validateEmail();
             this.refreshInputField(this.emailEl, this.emailContainerEl, 'email');
+            this.removeInputHighlighting(this.emailEl);
         });
 
         this.passwordEl.addEventListener(this.focus, () => {
@@ -52,12 +49,9 @@ export class Validator {
         });
 
         this.passwordEl.addEventListener(this.blur, () => {
-            this.removeInputHighlighting(this.passwordEl);
-        });
-
-        this.passwordEl.addEventListener(this.input, () => {
             this.validatePassword();
             this.refreshInputField(this.passwordEl, this.passwordContainerEl, 'password');
+            this.removeInputHighlighting(this.passwordEl);
         });
     }
 
